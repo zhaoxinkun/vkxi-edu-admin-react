@@ -1,6 +1,9 @@
+import { RouterProvider } from "react-router";
+import router from "./router/index.jsx";
+
 function App() {
   return (
-    <div>this is app</div>
+    <RouterProvider router={router}/>
   );
 }
 
