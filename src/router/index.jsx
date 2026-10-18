@@ -1,29 +1,49 @@
-import Login from "../login/index.jsx";
-import Home from "../pages/Home.jsx";
+import BasicLayout from "@/layout/basicLayout/index.jsx";
+import Dashboard from "@/pages/Dashboard/index.jsx";
+import Login from "@/pages/login/index.jsx";
 import { createBrowserRouter } from "react-router";
 
+// 路由数据
+// const routeConfig = [
+//   {
+//     path: "/login",
+//     component: Login,
+//   },
+//   {
+//     path: "/",
+//     component: Home,
+//   },
+// ];
 
-const routeConfig = [
+// 遍历生成路由对象
+// const routes = routeConfig.map((route) => {
+//   const Page = route.component;
+//
+//   return {
+//     path: route.path,
+//     element: <Page/>,
+//   };
+// });
+
+
+const routes = [
   {
-    path: "/login",
-    component: Login,
+    path: "/",
+    element: <BasicLayout/>,
+    children: [
+      {
+        index: true,
+        element: <Dashboard/>,
+      },
+    ],
   },
   {
-    path: "/home",
-    component: Home,
+    path: "/login",
+    element: <Login/>,
   },
 ];
 
-
-const routes = routeConfig.map((route) => {
-  const Page = route.component;
-
-  return {
-    path: route.path,
-    element: <Page/>,
-  };
-});
-
+// 创建路由实例
 const router = createBrowserRouter(routes);
 
 export default router;

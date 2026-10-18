@@ -1,6 +1,6 @@
 import "./login.css";
 import { userLogin } from "@/api/api.js";
-import { setToken } from "@/utils/token.js";
+// import { setToken } from "@/utils/token.js";
 import { Button, Form, Input, Checkbox, Flex } from "antd";
 import { message } from "@/utils/messages.jsx";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
@@ -15,7 +15,7 @@ function Login() {
   const [form] = Form.useForm();// ✅ 顶层
 
   // 编程式路由导航
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   //防止多次点击发送登陆请求
   const [loading, setLoading] = useState(false);
