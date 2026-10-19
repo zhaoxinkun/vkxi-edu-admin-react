@@ -5,7 +5,7 @@ const { Content: AntdContent } = Layout;
 
 export default function Content() {
   return (
-    <AntdContent style={{ backgroundColor: "blue" }}>
+    <AntdContent style={{ backgroundColor: "blue" }} className="mt-1">
       <Outlet/>
     </AntdContent>
   );

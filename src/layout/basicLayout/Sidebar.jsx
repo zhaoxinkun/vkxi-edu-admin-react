@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Layout, Menu, theme } from "antd";
+import { Layout, Menu } from "antd";
 import {
   DesktopOutlined,
   FileOutlined,
@@ -37,9 +37,12 @@ export default function Sidebar() {
   return (
     <>
       {/*侧边导航*/}
-      <Sider collapsible collapsed={collapsed} onCollapse={value => setCollapsed(value)}>
-        <div className="demo-logo-vertical"/>
-        <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline" items={menus}/>
+      <Sider theme="light" collapsible collapsed={collapsed}
+             onCollapse={value => setCollapsed(value)}>
+        <div className="demo-logo-vertical text-xl text-center m-1">
+          高校教务管理系统
+        </div>
+        <Menu defaultSelectedKeys={["1"]} mode="inline" items={menus}/>
       </Sider>
     </>
   );
