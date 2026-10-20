@@ -7,18 +7,19 @@ const request = axios.create({
 });
 
 // 请求拦截器
-request.interceptors.request.use(config => {
-    config.headers["token"] = getToken();
-    return config;
-  },
-);
-
-// 响应拦截器
-request.interceptors.response.use(res => {
-  return res;
-}, err => {
-  return Promise.reject(err);
+request.interceptors.request.use((config) => {
+  config.headers["token"] = getToken();
+  return config;
 });
 
+// 响应拦截器
+request.interceptors.response.use(
+  (res) => {
+    return res;
+  },
+  (err) => {
+    return Promise.reject(err);
+  },
+);
 
 export default request;

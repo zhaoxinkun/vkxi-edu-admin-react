@@ -1,37 +1,35 @@
 .login {
-    height: 100vh;
-    background: url(../../assets/img/bg.jpg) no-repeat;
-    background-size: cover;
-    /*perspective: 800px;*/
+  height: 100vh;
+  background: url(../../assets/img/bg.jpg) no-repeat;
+  background-size: cover;
+  /*perspective: 800px;*/
 }
 
 /*中间内容区*/
 .login-content {
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, .3);
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*表单区域*/
 .login-form {
-    width: 45vh;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 3px 20px 2px rgba(0, 0, 0, .3);
+  width: 45vh;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 20px 2px rgba(0, 0, 0, 0.3);
 }
-
 
 /*标题*/
 .login-title {
-    font-size: 25px;
-    margin: 20px 0;
+  font-size: 25px;
+  margin: 20px 0;
 }
-
 
 /*body, html {*/
 /*    width: 100%;*/
@@ -45,7 +43,6 @@
 /*#app {*/
 /*    height: 100%;*/
 /*}*/
-
 
 /*!*登录*!*/
 /*.login {*/

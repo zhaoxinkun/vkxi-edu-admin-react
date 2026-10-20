@@ -10,9 +10,8 @@ import MessagesBridge from "@/utils/messages.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AntdApp>
-      <MessagesBridge/>
-      <App/>
+      <MessagesBridge />
+      <App />
     </AntdApp>
-
   </StrictMode>,
 );

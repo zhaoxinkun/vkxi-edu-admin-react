@@ -10,7 +10,6 @@ import {
 
 const { Sider } = Layout;
 
-
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -21,15 +20,15 @@ function getItem(label, key, icon, children) {
 }
 
 const menus = [
-  getItem("Option 1", "1", <PieChartOutlined/>),
-  getItem("Option 2", "2", <DesktopOutlined/>),
-  getItem("User", "sub1", <UserOutlined/>, [
+  getItem("Option 1", "1", <PieChartOutlined />),
+  getItem("Option 2", "2", <DesktopOutlined />),
+  getItem("User", "sub1", <UserOutlined />, [
     getItem("Tom", "3"),
     getItem("Bill", "4"),
     getItem("Alex", "5"),
   ]),
-  getItem("Team", "sub2", <TeamOutlined/>, [getItem("Team 1", "6"), getItem("Team 2", "8")]),
-  getItem("Files", "9", <FileOutlined/>),
+  getItem("Team", "sub2", <TeamOutlined />, [getItem("Team 1", "6"), getItem("Team 2", "8")]),
+  getItem("Files", "9", <FileOutlined />),
 ];
 
 export default function Sidebar() {
@@ -37,12 +36,14 @@ export default function Sidebar() {
   return (
     <>
       {/*侧边导航*/}
-      <Sider theme="light" collapsible collapsed={collapsed}
-             onCollapse={value => setCollapsed(value)}>
-        <div className="demo-logo-vertical text-xl text-center m-1">
-          高校教务管理系统
-        </div>
-        <Menu defaultSelectedKeys={["1"]} mode="inline" items={menus}/>
+      <Sider
+        theme="light"
+        collapsible
+        collapsed={collapsed}
+        onCollapse={(value) => setCollapsed(value)}
+      >
+        <div className="demo-logo-vertical text-xl text-center m-1">高校教务管理系统</div>
+        <Menu defaultSelectedKeys={["1"]} mode="inline" items={menus} />
       </Sider>
     </>
   );

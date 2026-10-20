@@ -9,10 +9,10 @@ export default function BasicLayout() {
     <>
       {/*布局*/}
       <Layout className="module" style={{ minHeight: "100vh" }}>
-        <Sidebar/>
+        <Sidebar />
         <Layout className="mr-1 ml-1">
-          <Header/>
-          <Content/>
+          <Header />
+          <Content />
         </Layout>
       </Layout>
     </>

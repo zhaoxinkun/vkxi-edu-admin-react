@@ -5,7 +5,7 @@ import router from "./router/index.jsx";
 function App() {
   return (
     // 路由
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   );
 }
 

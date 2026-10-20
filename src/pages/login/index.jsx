@@ -8,11 +8,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import md5 from "md5";
 
-
 function Login() {
-
   // 表单数据获取
-  const [form] = Form.useForm();// ✅ 顶层
+  const [form] = Form.useForm(); // ✅ 顶层
 
   // 编程式路由导航
   // const navigate = useNavigate();
@@ -21,16 +19,17 @@ function Login() {
   const [loading, setLoading] = useState(false);
 
   // 完成
-  const onFinish = async values => {
-
+  const onFinish = async (values) => {
     setLoading(true);
     let { account, password } = values;
 
     try {
-      let res = (await userLogin({
-        account,
-        password: md5(password),
-      })).data;
+      let res = (
+        await userLogin({
+          account,
+          password: md5(password),
+        })
+      ).data;
 
       if (res.code === 20000) {
         console.log(res);
@@ -48,7 +47,7 @@ function Login() {
   };
 
   // 失败
-  const onFinishFailed = errorInfo => {
+  const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
 
@@ -56,10 +55,7 @@ function Login() {
     <div className="login">
       <div className="login-content">
         <div className="login-form">
-
-          <p className="login-title">
-            高校教务管理系统
-          </p>
+          <p className="login-title">高校教务管理系统</p>
 
           <Form
             form={form}
@@ -73,15 +69,15 @@ function Login() {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
           >
-
             <Form.Item
               label="username"
               name="account"
               rules={[
                 { required: true, message: "Please input your Username!" },
-                { min: 3, message: "Username must be at least 3 characters long!" }]}
+                { min: 3, message: "Username must be at least 3 characters long!" },
+              ]}
             >
-              <Input prefix={<UserOutlined/>} placeholder="Username"/>
+              <Input prefix={<UserOutlined />} placeholder="Username" />
             </Form.Item>
 
             <Form.Item
@@ -89,9 +85,10 @@ function Login() {
               name="password"
               rules={[
                 { required: true, message: "Please input your Password!" },
-                { min: 3, message: "Password must be at least 3 characters long!" }]}
+                { min: 3, message: "Password must be at least 3 characters long!" },
+              ]}
             >
-              <Input prefix={<LockOutlined/>} type="password" placeholder="Password"/>
+              <Input prefix={<LockOutlined />} type="password" placeholder="Password" />
             </Form.Item>
 
             <Form.Item>

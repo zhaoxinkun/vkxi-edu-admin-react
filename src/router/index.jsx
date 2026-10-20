@@ -25,21 +25,20 @@ import { createBrowserRouter } from "react-router";
 //   };
 // });
 
-
 const routes = [
   {
     path: "/",
-    element: <BasicLayout/>,
+    element: <BasicLayout />,
     children: [
       {
         index: true,
-        element: <Dashboard/>,
+        element: <Dashboard />,
       },
     ],
   },
   {
     path: "/login",
-    element: <Login/>,
+    element: <Login />,
   },
 ];
 
